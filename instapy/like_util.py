@@ -460,10 +460,11 @@ def like_image(browser):
     """Likes the browser opened image"""
     like_elem = browser.find_elements_by_xpath(
         "//a[@role='button']/span[text()='Like']/..")
-    liked_elem = browser.find_elements_by_xpath(
-        "//a[@role='button']/span[text()='Unlike']")
+   #liked_elem = browser.find_elements_by_xpath(
+   #     "//a[@role='button']/span[text()='Unlike']")
 
     if len(like_elem) == 1:
+        liked_elem = ''
         like_elem[0].send_keys("\n")
         print('--> Image Liked!')
         sleep(2)
